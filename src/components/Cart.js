@@ -1,7 +1,5 @@
 export default function Cart({cart}) {
-    // const localPrice = local.reduce((prev, next) => prev + next, 0);
     const price = cart.reduce((prev, next) => prev + next, 0);
-    // const price = localPrice + cartPrice;
     const total = price === 0 ? 0 : price;
     const shipping = price === 0 ? 0 : price <= 100 ? 20 : 40;
     const vat = (total + shipping) * .15;
